@@ -17,6 +17,7 @@
           <div class="menu-seachbar">
               <nav>
                 <ul>
+                    <a class="btn btn-success" href="{{route('comics.create')}}">Aggiungi un nuovo fumetto</a>
                 </ul>
             </nav>
             <div class="searchbar">
