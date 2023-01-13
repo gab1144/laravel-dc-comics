@@ -7,6 +7,15 @@
     <main>
         <div class="container">
             <span class="tag">Current series</span>
+
+            @if (session('deleted'))
+                <div>
+                    <div class="alert" role="alert">
+                        {{session('deleted')}}
+                    </div>
+                </div>
+            @endif
+
             <div class="card-area">
             @forelse ($comics as $comic)
                 <div class="card">

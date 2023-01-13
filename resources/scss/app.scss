@@ -431,3 +431,13 @@ main {
 form {
     display: inline;
 }
+
+.alert {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.264);
+    border-radius: 10px;
+    border: 1px solid red;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+}
