@@ -35,7 +35,7 @@
                 <label for="type" class="form-label">Tipo</label>
                 <input type="text" class="form-control" name="type" id="type" placeholder="Inserire il tipo" value="{{$comic->type}}">
               </div>
-              <button type="submit" class="btn btn-primary mb-5">Invia</button>
+              <button type="submit" class="btn btn-primary mb-5 submit-button">Invia</button>
         </form>
 
     </div>
