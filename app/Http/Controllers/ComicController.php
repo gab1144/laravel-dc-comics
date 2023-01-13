@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -34,13 +35,16 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
         $form_data = $request->all();
 
 
         $new_comic = new Comic();
         $form_data['slug'] = Comic::generateSlug($form_data['title']);
+        if(!is_null($form_data['thumb'])){
+            $new_comic->thumb = $form_data['thumb'];
+        }
         $new_comic->fill($form_data);
         $new_comic->save();
       // dd($new_pasta);
