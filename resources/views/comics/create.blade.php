@@ -24,7 +24,7 @@
                 <input type="number" min="0" step="any" class="form-control" name="price" id="price" placeholder="Inserire il prezzo">
               </div>
             <div class="mb-3">
-                <label for="series" class="form-label">Tipo</label>
+                <label for="series" class="form-label">Serie</label>
                 <input type="text" class="form-control" name="series" id="series" placeholder="Inserire la serie">
               </div>
               <div class="mb-3">
