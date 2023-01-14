@@ -14,7 +14,10 @@
             <div class="detail-area">
                 <div class="details">
 
-                    <h1>{{$comic->title}}</h1>
+                    <h1 class="main-title-show">{{$comic->title}}</h1><div class="options-show black-text">
+                        <a href="{{route('comics.edit', $comic)}}"><i class="fa-solid fa-pencil"></i></a>
+                        @include('partials.form-delete',['title'=>$comic->title, 'id'=>$comic->id])
+                    </div>
                     <div class="price-area">
                         <div class="price">
                             <div>

@@ -141,6 +141,9 @@ main {
     &:hover img{
       opacity: 0.5;
     }
+    img {
+        width: 100%;
+    }
     .img-area {
       width: 100%;
       aspect-ratio: 1;
@@ -490,4 +493,31 @@ form label {
 .invalid-feedback {
     margin-top: 2px;
     color: red;
+}
+
+.black-text {
+    color: black;
+    a {
+        color: black;
+    }
+    form #button-delete {
+        color: black;
+    }
+}
+
+.options-show {
+    margin-left: 20px;
+    display: inline-block;
+    i {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.main-title-show {
+    display: inline-block;
 }
