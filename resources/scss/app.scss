@@ -486,3 +486,8 @@ form label {
     color: $primary-color;
     text-decoration: none;
 }
+
+.invalid-feedback {
+    margin-top: 2px;
+    color: red;
+}
