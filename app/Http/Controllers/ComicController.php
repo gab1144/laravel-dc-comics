@@ -97,7 +97,11 @@ class ComicController extends Controller
             $form_data['slug'] = $comic->slug;
         }
 
-        $comic->thumb = $form_data['thumb'];
+        if(!is_null($form_data['thumb'])){
+            $comic->thumb = $form_data['thumb'];
+        } else {
+            $comic->thumb = 'https://www.boldstrokesbooks.com/assets/bsb/images/book-default-cover.jpg';
+        }
 
         $comic->update($form_data);
 
