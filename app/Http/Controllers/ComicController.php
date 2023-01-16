@@ -43,13 +43,13 @@ class ComicController extends Controller
         $new_comic = new Comic();
         $form_data['slug'] = Comic::generateSlug($form_data['title']);
 
-        //if(!is_null($form_data['thumb'])){
-        //    $new_comic->thumb = $form_data['thumb'];
-        //}
-
-        if(is_null($form_data['thumb'])){
-            $form_data['thumb'] = 'https://www.boldstrokesbooks.com/assets/bsb/images/book-default-cover.jpg';
+        if(!is_null($form_data['thumb'])){
+            $new_comic->thumb = $form_data['thumb'];
         }
+
+        //if(is_null($form_data['thumb'])){
+        //    $form_data['thumb'] = 'https://www.boldstrokesbooks.com/assets/bsb/images/book-default-cover.jpg';
+        //}
         $new_comic->fill($form_data);
         $new_comic->save();
       // dd($new_pasta);
@@ -97,9 +97,7 @@ class ComicController extends Controller
             $form_data['slug'] = $comic->slug;
         }
 
-        if(is_null($form_data['thumb'])){
-            $form_data['thumb'] = 'https://www.boldstrokesbooks.com/assets/bsb/images/book-default-cover.jpg';
-        }
+        $comic->thumb = $form_data['thumb'];
 
         $comic->update($form_data);
 
